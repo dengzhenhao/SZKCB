@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_bitmap"
+    android:orientation="horizontal" >
+
+    <include
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        layout="@layout/widget_left_menu" />
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="20" >
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_qr"
+                    android:layout_width="0dip"
+                    android:layout_height="125dip"
+                    android:layout_weight="1"
+                    android:background="@color/color_qr_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="43dip"
+                        android:layout_height="36dip"
+                        android:src="@drawable/icon_qr" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="center_vertical"
+                        android:text="开始扫描"
+                        android:textColor="#fff"
+                        android:textSize="36sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_choose_batch"
+                    android:layout_width="0dip"
+                    android:layout_height="125dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_weight="1"
+                    android:background="@color/color_list_head"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="43dip"
+                        android:layout_height="36dip"
+                        android:src="@drawable/icon_batch" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="center_vertical"
+                        android:text="选择批次"
+                        android:textColor="#fff"
+                        android:textSize="36sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_save"
+                    android:layout_width="0dip"
+                    android:layout_height="125dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_weight="1"
+                    android:background="@color/color_save_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="43dip"
+                        android:layout_height="36dip"
+                        android:src="@drawable/icon_second_competition_group" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="center_vertical"
+                        android:text="确认分组"
+                        android:textColor="#fff"
+                        android:textSize="36sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_batch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="-15dip"
+                android:gravity="center_vertical"
+                android:text="当前批次:未选择批次"
+                android:textColor="#000"
+                android:textSize="32sp" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="15dip"
+                layout="@layout/header_group" />
+
+            <LinearLayout
+                android:id="@+id/layout_list_student"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dip"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <fragment
+                android:id="@+id/frag_schedule"
+                android:name="com.websharp.fragment.FragmentScheduleSecond"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

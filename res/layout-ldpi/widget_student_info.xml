@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:text="苏州市第四中学空乘班招生面试"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_border" >
+        </LinearLayout>
+        
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="姓名" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="性别" />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="1"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="考试号" />
+
+            <TextView
+                android:id="@+id/tv_test_no"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="出生年月" />
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="6"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="民族" />
+
+            <TextView
+                android:id="@+id/tv_ethnic"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="6"
+                android:text="初中毕业学校（全称）" />
+
+            <TextView
+                android:id="@+id/tv_junior_high_school"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="10"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="6"
+                android:text="家庭详细住址" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="10"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="联系电话" />
+
+            <TextView
+                android:id="@+id/tv_mobile"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="固定电话" />
+
+            <TextView
+                android:id="@+id/tv_tel"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="班级任职情况" />
+
+            <TextView
+                android:id="@+id/tv_duty_in_class"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+            
+            
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="面试信息来源" />
+
+            <TextView
+                android:id="@+id/tv_info_source"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+
+            
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="荣誉获奖" />
+
+            <TextView
+                android:id="@+id/tv_awards"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="12"
+                android:text="" />
+
+        </LinearLayout>
+        
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="艺术特长" />
+
+            <TextView
+                android:id="@+id/tv_art_speciality"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="12"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="1"
+                android:text="考试成绩" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="身高" />
+
+            <TextView
+                android:id="@+id/tv_height"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="体重" />
+
+            <TextView
+                android:id="@+id/tv_weight"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_recorder_height_weight"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="6"
+                android:text="记录：" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/StyleStudentInfoLayout"
+            android:layout_weight="2" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="视力" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/StyleStudentInfoLayout"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        style="@style/StyleStudentInfoTextView"
+                        android:layout_weight="3"
+                        android:text="左眼" />
+
+                    <TextView
+                        android:id="@+id/tv_sight_left"
+                        style="@style/StyleStudentInfoTextView"
+                        android:layout_weight="2"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/StyleStudentInfoLayout"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        style="@style/StyleStudentInfoTextView"
+                        android:layout_weight="3"
+                        android:text="右眼" />
+
+                    <TextView
+                        android:id="@+id/tv_sight_right"
+                        style="@style/StyleStudentInfoTextView"
+                        android:layout_weight="2"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="辨色能力" />
+
+            <TextView
+                android:id="@+id/tv_weak_ness_result"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_recorder_sight"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="教师：" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="普通话测试" />
+
+            <TextView
+                android:id="@+id/tv_chinese_result"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="教师" />
+
+            <TextView
+                android:id="@+id/tv_recorder_chinese"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="英语口语" />
+
+            <TextView
+                android:id="@+id/tv_english_result"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="教师" />
+
+            <TextView
+                android:id="@+id/tv_recorder_english"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="综合面试\n初试成绩" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="合格票数" />
+
+            <TextView
+                android:id="@+id/tv_first_compeition_qualied_count"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="不合格票数" />
+
+            <TextView
+                android:id="@+id/tv_first_compeition_unqualied_count"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="3"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="复试成绩" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="A票" />
+
+            <TextView
+                android:id="@+id/tv_second_compeition_level_a_count"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="B票" />
+
+            <TextView
+                android:id="@+id/tv_second_compeition_level_b_count"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="" />
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="C票" />
+
+            <TextView
+                android:id="@+id/tv_second_compeition_level_c_count"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="2"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/StyleStudentInfoLayout" >
+
+            <TextView
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="4"
+                android:text="面试总成绩" />
+
+            <TextView
+                android:id="@+id/tv_total_score_result"
+                style="@style/StyleStudentInfoTextView"
+                android:layout_weight="12"
+                android:text="" />
+        </LinearLayout>
+
+        
+    </LinearLayout>
+
+</LinearLayout>

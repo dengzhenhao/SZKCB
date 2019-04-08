@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dip"
+    android:gravity="center"
+    android:id="@+id/layout_item_bg"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_seq"
+        style="@style/StyleListItemTextView"
+        android:layout_weight="1"
+        android:text="序号" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/StyleListItemTextView"
+        android:layout_weight="2"
+        android:text="邓臻昊啊" />
+
+    <TextView
+        android:id="@+id/tv_sex"
+        style="@style/StyleListItemTextView"
+        android:layout_weight="1"
+        android:text="性别" />
+
+    <TextView
+        android:id="@+id/tv_birthday"
+        style="@style/StyleListItemTextView"
+        android:layout_weight="2"
+        android:text="1983-08-19" />
+
+    <TextView
+        android:id="@+id/tv_test_no"
+        style="@style/StyleListItemTextView"
+        android:layout_weight="2"
+        android:text="20180001" />
+
+    <TextView
+        android:id="@+id/tv_ethnic"
+        style="@style/StyleListItemTextView"
+        android:layout_weight="1"
+        android:text="汉" />
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        style="@style/StyleListItemTextView"
+        android:layout_weight="2"
+        android:text="13771781983" />
+
+    <TextView
+        android:id="@+id/tv_junior_high_school"
+        style="@style/StyleListItemTextView"
+        android:layout_weight="4"
+        android:text="苏州市第二十一中学平江分校" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="0dip"
+        android:layout_height="45dip"
+        android:layout_weight="1"
+        android:padding="15dip"
+        android:src="@drawable/icon_delete" />
+
+</LinearLayout>

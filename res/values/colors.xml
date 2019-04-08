@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_color">#9a9a9a</color>
+    <color name="color_border">#aaaaaa</color>
+    <color name="color_qr_bg">#059500</color>
+    <color name="color_save_bg">#d77800</color>
+    <color name="color_list_head">#620000</color>
+    <color name="color_list_bg_f3f3f3">#f3f3f3</color>
+    <color name="color_list_bg_ffffff">#ffffff</color>
+    <color name="white">#ffffff</color>
+</resources>

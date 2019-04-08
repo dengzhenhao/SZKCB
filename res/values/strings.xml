@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">四中空乘考试评分</string>
+    <string name="version_name">1.0</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="dialog_title_common">操作提示</string>
+    <string name="dialog_msg_confirm">确定这个操作吗?</string>
+    <string name="dialog_msg_cancel">确定注销吗?</string>
+    
+    <string name="common_downloading">正在下载[%1$s%%]</string>
+    <string name="common_loading">正在进行操作...</string>
+    <string name="common_login_success">登录成功</string>
+    <string name="common_login_failed">登录失败,请检查用户或密码</string>
+    <string name="common_exit_repeat_press">再按一次退出应用程序</string>
+    
+   <string name="interview_info">面试时间:%1$s&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;计划面试人数:%2$s&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;实际面试人数:%1$s</string>
+
+</resources> 

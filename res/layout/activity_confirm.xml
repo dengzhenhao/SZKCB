@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_bitmap"
+    android:orientation="horizontal" >
+
+    <include
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        layout="@layout/widget_left_menu" />
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:orientation="vertical" >
+
+                
+
+                <LinearLayout
+                    android:id="@+id/layout_choose_batch"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dip"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="30dip"
+                    android:layout_marginTop="65dip"
+                    android:background="@color/color_list_head"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="43dip"
+                        android:layout_height="36dip"
+                        android:src="@drawable/icon_batch" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="center_vertical"
+                        android:text="选择批次"
+                        android:textColor="#fff"
+                        android:textSize="36sp" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/layout_qr"
+                    android:layout_width="match_parent" 
+                    android:layout_height="125dip"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="30dip"
+                    android:layout_marginTop="30dip"
+                    android:background="@color/color_qr_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="43dip"
+                        android:layout_height="36dip"
+                        android:src="@drawable/icon_qr" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="center_vertical"
+                        android:text="开始扫描"
+                        android:textColor="#fff"
+                        android:textSize="36sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="30dip"
+                    android:layout_marginTop="30dip"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_batch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="当前批次:未选择批次"
+                        android:textColor="#000"
+                        android:textSize="32sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <fragment
+                android:id="@+id/frag_student_info"
+                android:name="com.websharp.fragment.FragmentStudentInfo"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <fragment
+                android:id="@+id/frag_schedule"
+                android:name="com.websharp.fragment.FragmentScheduleConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

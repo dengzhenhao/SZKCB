@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_bitmap"
+    android:orientation="horizontal" >
+
+    <include
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        layout="@layout/widget_left_menu" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="11"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_qr"
+            android:layout_width="match_parent"
+            android:layout_height="125dip"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="65dip"
+            android:background="@color/color_qr_bg"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="43dip"
+                android:layout_height="36dip"
+                android:src="@drawable/icon_qr" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:gravity="center_vertical"
+                android:text="开始扫描"
+                android:textColor="#fff"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dip"
+            android:gravity="center"
+            android:text="辨色能力"
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/cbx_qualied"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:tag="1"
+                android:text="合格"
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+            <CheckBox
+                android:id="@+id/cbx_unqualied"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:checked="false"
+                android:tag="2"
+                android:text="不合格"
+                android:textColor="#000"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="30dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_save"
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:layout_weight="100"
+                android:background="@color/color_save_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:padding="5dip"
+                    android:src="@drawable/icon_save" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center"
+                    android:text="保 存"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="75dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="35sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/frag_student_info"
+        android:name="com.websharp.fragment.FragmentStudentInfo"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="9" />
+
+</LinearLayout>
