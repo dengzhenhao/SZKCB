@@ -44,7 +44,7 @@ public class FragmentScheduleConfirm extends Fragment {
 	int curScheduleID = 0;
 
 	// 2.1 定义用来与外部activity交互，获取到宿主activity
-	private FragmentInteraction listterner;
+	private FragmentInteraction listerner;
 
 	// 1 定义了所有activity必须实现的接口方法
 	public interface FragmentInteraction {
@@ -106,8 +106,8 @@ public class FragmentScheduleConfirm extends Fragment {
 							if (position == i) {
 								layout_bg_interview.setBackgroundResource(R.drawable.border_input_620000_2);
 								tv_interview_name.setTextColor(getResources().getColor(R.color.white));
-								if (listterner != null) {
-									listterner.process(adapterInterview.mList.get(i).ID);
+								if (listerner != null) {
+									listerner.process(adapterInterview.mList.get(i).ID);
 								}
 							} else {
 								layout_bg_interview.setBackgroundResource(R.drawable.border_input_620000);
@@ -374,7 +374,7 @@ public class FragmentScheduleConfirm extends Fragment {
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
 		if (activity instanceof FragmentInteraction) {
-			listterner = (FragmentInteraction) activity; // 2.2 获取到宿主activity并赋值
+			listerner = (FragmentInteraction) activity; // 2.2 获取到宿主activity并赋值
 		}
 	}
 

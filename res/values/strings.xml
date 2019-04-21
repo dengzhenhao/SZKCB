@@ -15,6 +15,6 @@
     <string name="common_login_failed">登录失败,请检查用户或密码</string>
     <string name="common_exit_repeat_press">再按一次退出应用程序</string>
     
-   <string name="interview_info">面试时间:%1$s&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;计划面试人数:%2$s&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;实际面试人数:%1$s</string>
+   <string name="interview_info">面试时间:%1$s&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;计划面试人数:%2$s&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;实际面试人数:%3$s</string>
 
 </resources> 

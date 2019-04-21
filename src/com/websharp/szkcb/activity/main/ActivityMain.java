@@ -49,8 +49,8 @@ public class ActivityMain extends BaseActivity {
 	private ImageView iv_chinese;
 	private ImageView iv_first_competition_group;
 	private ImageView iv_first_competition;
-	private ImageView iv_second_competition_group;
-	private ImageView iv_second_competition;
+//	private ImageView iv_second_competition_group;
+//	private ImageView iv_second_competition;
 	private ImageView iv_confirm_student_info;
 	private TextView tv_version;
 
@@ -175,15 +175,15 @@ public class ActivityMain extends BaseActivity {
 				else
 					iv_first_competition.setBackgroundResource(R.drawable.btn_first_competition_disabled);
 			} else if (src.equals("09")) {
-				if (allowSubmit)
-					iv_second_competition_group.setOnClickListener(this);
-				else
-					iv_second_competition_group.setBackgroundResource(R.drawable.btn_second_competition_group_disabled);
+//				if (allowSubmit)
+//					iv_second_competition_group.setOnClickListener(this);
+//				else
+//					iv_second_competition_group.setBackgroundResource(R.drawable.btn_second_competition_group_disabled);
 			} else if (src.equals("10")) {
-				if (allowSubmit)
-					iv_second_competition.setOnClickListener(this);
-				else
-					iv_second_competition.setBackgroundResource(R.drawable.btn_second_competition_disabled);
+//				if (allowSubmit)
+//					iv_second_competition.setOnClickListener(this);
+//				else
+//					iv_second_competition.setBackgroundResource(R.drawable.btn_second_competition_disabled);
 			}
 		}
 	}
