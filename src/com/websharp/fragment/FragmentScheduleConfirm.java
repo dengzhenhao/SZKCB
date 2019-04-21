@@ -93,7 +93,7 @@ public class FragmentScheduleConfirm extends Fragment {
 					time = new DateUtil().secondBetweenNow(adapterInterview.mList.get(position).ExpiredTime);
 				} catch (ParseException e) {
 					e.printStackTrace();
-				}
+				} 
 
 				if (time >= 0) {
 					if (adapterInterview.mList.get(position).FactCount < adapterInterview.mList
