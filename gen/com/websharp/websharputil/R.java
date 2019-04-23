@@ -27,16 +27,16 @@ public final class R {
 	}
 	public static final class drawable {
 		public static final int border_loading_progressbar = 0x7f02000c;
-		public static final int progress_self = 0x7f020040;
-		public static final int spinner_48_inner_holo = 0x7f020044;
-		public static final int switch_off = 0x7f020045;
-		public static final int switch_on = 0x7f020046;
-		public static final int switch_point = 0x7f020047;
+		public static final int progress_self = 0x7f020041;
+		public static final int spinner_48_inner_holo = 0x7f020045;
+		public static final int switch_off = 0x7f020046;
+		public static final int switch_on = 0x7f020047;
+		public static final int switch_point = 0x7f020048;
 	}
 	public static final class id {
 		public static final int FILL = 0x7f070010;
 		public static final int STROKE = 0x7f070011;
-		public static final int id_tv_loadingmsg = 0x7f07005b;
+		public static final int id_tv_loadingmsg = 0x7f07005d;
 		public static final int tag = 0x7f070003;
 		public static final int tag_course_query_index = 0x7f070006;
 		public static final int tag_course_query_type = 0x7f070005;
