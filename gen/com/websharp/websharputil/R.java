@@ -36,7 +36,7 @@ public final class R {
 	public static final class id {
 		public static final int FILL = 0x7f070010;
 		public static final int STROKE = 0x7f070011;
-		public static final int id_tv_loadingmsg = 0x7f07005d;
+		public static final int id_tv_loadingmsg = 0x7f07005f;
 		public static final int tag = 0x7f070003;
 		public static final int tag_course_query_index = 0x7f070006;
 		public static final int tag_course_query_type = 0x7f070005;

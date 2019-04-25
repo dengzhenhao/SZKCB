@@ -176,6 +176,16 @@
                 android:text="C"
                 android:textColor="@color/color_border"
                 android:textSize="18sp" />
+             
+             <Button
+                android:id="@+id/btn_d"
+                android:layout_width="60dip"
+                android:layout_height="35dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/border_input"
+                android:text="D"
+                android:textColor="@color/color_border"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 

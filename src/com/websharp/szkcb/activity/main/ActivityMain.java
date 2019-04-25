@@ -49,7 +49,7 @@ public class ActivityMain extends BaseActivity {
 	private ImageView iv_chinese;
 	private ImageView iv_first_competition_group;
 	private ImageView iv_first_competition;
-//	private ImageView iv_second_competition_group;
+	private ImageView iv_second_competition_group;
 	private ImageView iv_second_competition;
 	private ImageView iv_confirm_student_info;
 	private TextView tv_version;
@@ -93,9 +93,9 @@ public class ActivityMain extends BaseActivity {
 		case R.id.iv_first_competition:
 			Util.startActivity(ActivityMain.this, ActivityFirstCompeition.class, false);
 			break;
-//		case R.id.iv_second_competition_group:
-//			Util.startActivity(ActivityMain.this, ActivitySecondCompeitionGroup.class, false);
-//			break;
+		case R.id.iv_second_competition_group:
+			Util.startActivity(ActivityMain.this, ActivitySecondCompeitionGroup.class, false);
+			break;
 		case R.id.iv_second_competition:
 			Util.startActivity(ActivityMain.this, ActivitySecondCompeition.class, false);
 			break;
@@ -123,7 +123,7 @@ public class ActivityMain extends BaseActivity {
 		iv_chinese = (ImageView) findViewById(R.id.iv_chinese);
 		iv_first_competition_group = (ImageView) findViewById(R.id.iv_first_competition_group);
 		iv_first_competition = (ImageView) findViewById(R.id.iv_first_competition);
-//		iv_second_competition_group = (ImageView) findViewById(R.id.iv_second_competition_group);
+		iv_second_competition_group = (ImageView) findViewById(R.id.iv_second_competition_group);
 		iv_second_competition = (ImageView) findViewById(R.id.iv_second_competition);
 		iv_confirm_student_info = (ImageView) findViewById(R.id.iv_confirm_student_info);
 
@@ -175,10 +175,10 @@ public class ActivityMain extends BaseActivity {
 				else
 					iv_first_competition.setBackgroundResource(R.drawable.btn_first_competition_disabled);
 			} else if (src.equals("09")) {
-//				if (allowSubmit)
-//					iv_second_competition_group.setOnClickListener(this);
-//				else
-//					iv_second_competition_group.setBackgroundResource(R.drawable.btn_second_competition_group_disabled);
+				if (allowSubmit)
+					iv_second_competition_group.setOnClickListener(this);
+				else
+					iv_second_competition_group.setBackgroundResource(R.drawable.btn_second_competition_group_disabled);
 			} else if (src.equals("10")) {
 				if (allowSubmit)
 					iv_second_competition.setOnClickListener(this);

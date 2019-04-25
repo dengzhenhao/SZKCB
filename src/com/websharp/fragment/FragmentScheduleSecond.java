@@ -1,5 +1,6 @@
 package com.websharp.fragment;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 
 import org.json.JSONException;
@@ -17,6 +18,7 @@ import com.websharp.szkcb.R;
 import com.websharputil.common.ConvertUtil;
 import com.websharputil.common.LogUtil;
 import com.websharputil.common.Util;
+import com.websharputil.date.DateUtil;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -251,7 +253,9 @@ public class FragmentScheduleSecond extends Fragment {
 	}
 
 	class ViewHolderInterview {
+		private LinearLayout layout_bg_interview;
 		private TextView tv_interview_name;
+		private TextView tv_interview_info;
 	}
 
 	class AdapterInterview extends BaseAdapter {
@@ -289,12 +293,44 @@ public class FragmentScheduleSecond extends Fragment {
 			if (convertView == null) {
 				convertView = mInflater.inflate(R.layout.item_interview, null);
 				holder = new ViewHolderInterview();
+				holder.layout_bg_interview = (LinearLayout)convertView.findViewById(R.id.layout_bg_interview);
 				holder.tv_interview_name = (TextView) convertView.findViewById(R.id.tv_interview_name);
+				holder.tv_interview_info = (TextView) convertView.findViewById(R.id.tv_interview_info);
 				convertView.setTag(holder);
 			} else {
 				holder = (ViewHolderInterview) convertView.getTag();
 			}
+			
+
 			holder.tv_interview_name.setText(mList.get(position).InterviewName);
+			holder.tv_interview_info
+					.setText(getString(R.string.interview_info,
+							new DateUtil().TimeParseStringToFormatString(mList.get(position).StartTime, "HH:mm") + "-"
+									+ new DateUtil().TimeParseStringToFormatString(mList.get(position).ExpiredTime,
+											"HH:mm"),
+							mList.get(position).PlanCount + "", mList.get(position).FactCount + ""));
+			
+			holder.layout_bg_interview.setBackgroundResource(R.drawable.border_input_interview_gray);
+			holder.tv_interview_name.setTextColor(getActivity().getResources().getColor(R.color.color_border));
+			holder.tv_interview_info.setTextColor(getActivity().getResources().getColor(R.color.color_border));
+			
+			int time = 0;
+			try {
+				time = new DateUtil().secondBetweenNow(mList.get(position).ExpiredTime);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+
+			if (time >= 0) {
+				if (mList.get(position).FactCount < mList
+						.get(position).PlanCount) {
+					holder.layout_bg_interview.setBackgroundResource(R.drawable.border_input_620000);
+					holder.tv_interview_name.setTextColor(getActivity().getResources().getColor(R.color.color_list_head));
+					holder.tv_interview_info.setTextColor(getActivity().getResources().getColor(R.color.color_list_head));
+				}
+			}
+			
+			
 			return convertView;
 		}
 	}

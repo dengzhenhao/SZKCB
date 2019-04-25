@@ -37,7 +37,7 @@ public class ActivitySecondCompeition extends BaseActivity {
 	private LinearLayout layout_refresh_group;
 	private LinearLayout layout_refresh;
 	private LinearLayout layout_group;
-	private LinearLayout layout_save; 
+	private LinearLayout layout_save;
 	private GridView gv_group_student;
 	private TextView tv_group;
 	ArrayList<EntityStudentScore> listStudentScore = new ArrayList<EntityStudentScore>();
@@ -59,8 +59,8 @@ public class ActivitySecondCompeition extends BaseActivity {
 				for (int i = 0; i < GlobalData.listStudentSecondCompetitionGroup.size(); i++) {
 					if (GlobalData.listStudentSecondCompetitionGroup.get(i).Score.isEmpty()) {
 						Util.createToast(this,
-								"学生 " + GlobalData.listStudentSecondCompetitionGroup.get(i).RealName + " 未评分,不能提交", 3000)
-								.show();
+								"学生 " + GlobalData.listStudentSecondCompetitionGroup.get(i).RealName + " 未评分,不能提交",
+								3000).show();
 						return;
 					}
 					JSONObject jObj = new JSONObject();
@@ -97,7 +97,7 @@ public class ActivitySecondCompeition extends BaseActivity {
 		tv_group = (TextView) findViewById(R.id.tv_group);
 		layout_refresh.setOnClickListener(this);
 		layout_save.setOnClickListener(this);
-		layout_back.setOnClickListener(this); 
+		layout_back.setOnClickListener(this);
 
 	}
 
@@ -134,7 +134,7 @@ public class ActivitySecondCompeition extends BaseActivity {
 					gv_group_student.setAdapter(adapterGroupStudent);
 					adapterGroupStudent.notifyDataSetChanged();
 					layout_refresh_group.setVisibility(View.GONE);
-					layout_group.setVisibility(View.VISIBLE); 
+					layout_group.setVisibility(View.VISIBLE);
 				} else {
 					Util.createToast(ActivitySecondCompeition.this, obj.optString("message"), 3000).show();
 				}
@@ -154,7 +154,7 @@ public class ActivitySecondCompeition extends BaseActivity {
 	public void bindGroup() {
 		// 绑定基本信息
 		try {
-			new SwzfHttpHandler(cbGetGroup, this).getGroup("0","2");
+			new SwzfHttpHandler(cbGetGroup, this).getGroup("0", "2");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -174,11 +174,11 @@ public class ActivitySecondCompeition extends BaseActivity {
 
 				Util.createToast(ActivitySecondCompeition.this, obj.optString("message"), 3000).show();
 				if (obj.optString("code").equals("0")) {
-//					finish();
+					// finish();
 					GlobalData.curSecondCompetitionGroup = null;
 					GlobalData.listStudentSecondCompetitionGroup.clear();
 					layout_refresh_group.setVisibility(View.VISIBLE);
-					layout_group.setVisibility(View.GONE); 
+					layout_group.setVisibility(View.GONE);
 					adapterGroupStudent.notifyDataSetChanged();
 				} else {
 
@@ -219,6 +219,7 @@ public class ActivitySecondCompeition extends BaseActivity {
 		private Button btn_a;
 		private Button btn_b;
 		private Button btn_c;
+		private Button btn_d;
 	}
 
 	class AdapterGroupStudent extends BaseAdapter {
@@ -268,6 +269,7 @@ public class ActivitySecondCompeition extends BaseActivity {
 				holder.btn_a = (Button) convertView.findViewById(R.id.btn_a);
 				holder.btn_b = (Button) convertView.findViewById(R.id.btn_b);
 				holder.btn_c = (Button) convertView.findViewById(R.id.btn_c);
+				holder.btn_d = (Button) convertView.findViewById(R.id.btn_d);
 				convertView.setTag(holder);
 			} else {
 				holder = (ViewHolderSchedule) convertView.getTag();
@@ -284,69 +286,74 @@ public class ActivitySecondCompeition extends BaseActivity {
 			holder.btn_a.setTag(position);
 			holder.btn_b.setTag(position);
 			holder.btn_c.setTag(position);
+			holder.btn_d.setTag(position);
 
 			holder.btn_a.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					int index = (Integer) v.getTag();
-					View child = gv_group_student.getChildAt(index);
-					ImageView iv_checked = (ImageView) child.findViewById(R.id.iv_tag_checked);
-					Button btn_a = (Button) child.findViewById(R.id.btn_a);
-					Button btn_b = (Button) child.findViewById(R.id.btn_b);
-					Button btn_c = (Button) child.findViewById(R.id.btn_c);
-					btn_a.setBackgroundResource(R.drawable.border_input_059500);
-					btn_a.setTextColor(getResources().getColor(R.color.white));
-					btn_b.setBackgroundResource(R.drawable.border_input);
-					btn_b.setTextColor(getResources().getColor(R.color.color_border));
-					btn_c.setBackgroundResource(R.drawable.border_input);
-					btn_c.setTextColor(getResources().getColor(R.color.color_border));
-					iv_checked.setBackgroundColor(getResources().getColor(R.color.color_list_head));
-					GlobalData.listStudentSecondCompetitionGroup.get(index).Score = "A";
+					handlerScoreCheck(v, "A");
 				}
 			});
 
 			holder.btn_b.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					int index = (Integer) v.getTag();
-					View child = gv_group_student.getChildAt(index);
-					ImageView iv_checked = (ImageView) child.findViewById(R.id.iv_tag_checked);
-					Button btn_a = (Button) child.findViewById(R.id.btn_a);
-					Button btn_b = (Button) child.findViewById(R.id.btn_b);
-					Button btn_c = (Button) child.findViewById(R.id.btn_c);
-					btn_b.setBackgroundResource(R.drawable.border_input_059500);
-					btn_b.setTextColor(getResources().getColor(R.color.white));
-					btn_a.setBackgroundResource(R.drawable.border_input);
-					btn_a.setTextColor(getResources().getColor(R.color.color_border));
-					btn_c.setBackgroundResource(R.drawable.border_input);
-					btn_c.setTextColor(getResources().getColor(R.color.color_border));
-					iv_checked.setBackgroundColor(getResources().getColor(R.color.color_list_head));
-					GlobalData.listStudentSecondCompetitionGroup.get(index).Score = "B";
+					handlerScoreCheck(v, "B");
 				}
 			});
-			
+
 			holder.btn_c.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					int index = (Integer) v.getTag();
-					View child = gv_group_student.getChildAt(index);
-					ImageView iv_checked = (ImageView) child.findViewById(R.id.iv_tag_checked);
-					Button btn_a = (Button) child.findViewById(R.id.btn_a);
-					Button btn_b = (Button) child.findViewById(R.id.btn_b);
-					Button btn_c = (Button) child.findViewById(R.id.btn_c);
-					btn_c.setBackgroundResource(R.drawable.border_input_059500);
-					btn_c.setTextColor(getResources().getColor(R.color.white));
-					btn_a.setBackgroundResource(R.drawable.border_input);
-					btn_a.setTextColor(getResources().getColor(R.color.color_border));
-					btn_b.setBackgroundResource(R.drawable.border_input);
-					btn_b.setTextColor(getResources().getColor(R.color.color_border));
-					iv_checked.setBackgroundColor(getResources().getColor(R.color.color_list_head));
-					GlobalData.listStudentSecondCompetitionGroup.get(index).Score = "C";
+					handlerScoreCheck(v, "C");
+				}
+			});
+
+			holder.btn_d.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					handlerScoreCheck(v, "D");
 				}
 			});
 
 			return convertView;
 		}
+	}
+
+	private void handlerScoreCheck(View v, String score) {
+		int index = (Integer) v.getTag();
+		View child = gv_group_student.getChildAt(index);
+		ImageView iv_checked = (ImageView) child.findViewById(R.id.iv_tag_checked);
+		Button btn_a = (Button) child.findViewById(R.id.btn_a);
+		Button btn_b = (Button) child.findViewById(R.id.btn_b);
+		Button btn_c = (Button) child.findViewById(R.id.btn_c);
+		Button btn_d = (Button) child.findViewById(R.id.btn_d);
+
+		btn_a.setBackgroundResource(R.drawable.border_input);
+		btn_a.setTextColor(getResources().getColor(R.color.color_border));
+		btn_b.setBackgroundResource(R.drawable.border_input);
+		btn_b.setTextColor(getResources().getColor(R.color.color_border));
+		btn_c.setBackgroundResource(R.drawable.border_input);
+		btn_c.setTextColor(getResources().getColor(R.color.color_border));
+		btn_d.setBackgroundResource(R.drawable.border_input);
+		btn_d.setTextColor(getResources().getColor(R.color.color_border));
+
+		if (score.equals("A")) {
+			btn_a.setBackgroundResource(R.drawable.border_input_059500);
+			btn_a.setTextColor(getResources().getColor(R.color.white));
+		} else if (score.equals("B")) {
+			btn_b.setBackgroundResource(R.drawable.border_input_059500);
+			btn_b.setTextColor(getResources().getColor(R.color.white));
+		} else if (score.equals("C")) {
+			btn_c.setBackgroundResource(R.drawable.border_input_059500);
+			btn_c.setTextColor(getResources().getColor(R.color.white));
+		} else if (score.equals("D")) {
+			btn_d.setBackgroundResource(R.drawable.border_input_059500);
+			btn_d.setTextColor(getResources().getColor(R.color.white));
+		}
+
+		iv_checked.setBackgroundColor(getResources().getColor(R.color.color_list_head));
+		GlobalData.listStudentSecondCompetitionGroup.get(index).Score = score;
 	}
 
 }
