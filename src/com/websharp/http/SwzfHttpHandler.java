@@ -40,7 +40,7 @@ public class SwzfHttpHandler extends BaseHttpHandler {
 	 */
 	public static final String BASE_URL_COMMON = "http://www.taowu.com.cn";
 	public static final String BASE_URL_TEST = "http://taowu.websail.cn";
-	public static final String BASE_URL = BASE_URL_TEST+"/handlers"; 
+	public static final String BASE_URL = BASE_URL_COMMON+"/handlers"; 
 
 	/** 
 	 * 检查更新
